@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Firebase Library Management</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="module" src="app.js" defer></script>
+</head>
+<body>
+  <h2>📚 Firebase Library Management System</h2>
+
+  <!-- ADD BOOK SECTION -->
+  <div id="add-book">
+    <input id="title" placeholder="Book Title" />
+    <input id="author" placeholder="Author" />
+    <input id="category" placeholder="Category" />
+    <input id="copies" placeholder="Copies" type="number" />
+    <button id="addBtn">Add Book</button>
+  </div>
+
+  <hr>
+
+  <!-- BORROW BOOK SECTION -->
+  <h3>🎓 Borrow a Book</h3>
+  <div id="borrow-book">
+    <input id="studentName" placeholder="Student Name" />
+    <input id="bookTitleBorrow" placeholder="Book Title to Borrow" />
+    <button id="borrowBtn">Borrow Book</button>
+  </div>
+
+  <hr>
+
+  <!-- LOOKUP QUERY BUTTONS -->
+  <h3>🔍 Cross-Collection Queries</h3>
+  <div>
+    <button onclick="showBorrowedBookDetails()">📘 Borrowed Book Details (with Author & Category)</button>
+    <button onclick="showOverdueBooks()">⏰ Show Overdue Books</button>
+    <button onclick="showStudentsByCategory()">🎯 Students by Category</button>
+    <button onclick="showStudentsWithMultipleBorrows()">👥 Students with Multiple Borrows</button>
+  </div>
+
+  <hr>
+
+  <!-- EXISTING QUERIES -->
+  <h3>📖 Book Queries</h3>
+  <div>
+    <button onclick="showBooksCount()">Count Total Books</button>
+    <button onclick="showLowStockBooks()">Low Stock Books (≤5)</button>
+  </div>
+
+  <hr>
+  <div id="book-list"></div>
+  <hr>
+  <div id="borrowed-list"></div>
+  <hr>
+  <div id="lookup-results"></div>
+</body>
+</html>
